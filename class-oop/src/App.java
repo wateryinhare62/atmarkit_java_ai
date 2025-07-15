@@ -9,5 +9,9 @@ public class App {
         myCat.meow(); // 引数なしのメソッド呼び出し
         String sound = myCat.meow(3); // 引数ありのメソッド呼び出し
         System.out.println(sound); // 返り値を表示
+
+        // もう一つインスタンスを作って同じように使ってみて
+        Cat anotherCat = new Cat("Whiskers", 5);
+        anotherCat.meow(); // 引数なしのメソッド呼び出し
     }
 }
