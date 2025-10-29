@@ -13,4 +13,5 @@ $RECYCLE.BIN/
 *~
 .nfs*
 
+bin/
 .class

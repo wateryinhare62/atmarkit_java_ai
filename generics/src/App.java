@@ -1,33 +1,27 @@
-import java.util.ArrayList;
 import java.util.List;
+import java.util.ArrayList;
 
 public class App {
     public static void main(String[] args) {
-        // List<String> の簡単なサンプル
-        List<String> fruits = new ArrayList<>();
-        fruits.add("Apple");
-        fruits.add("Banana");
-        fruits.add("Cherry");
+        // Stringだけを入れるList（ジェネリクス）
+        List<String> names = new ArrayList<>();
 
-        System.out.println("Fruits list size: " + fruits.size());
+        // 要素の追加
+        names.add("Alice");
+        names.add("Bob");
+        names.add("Charlie");
 
-        // 拡張forループで表示
-        for (String fruit : fruits) {
-            System.out.println("- " + fruit);
+        // コンパイル時に型チェックされるため、間違った型は追加できない
+        // names.add(123); // <-- コンパイルエラーになる
+
+        // 要素数と取り出し
+        System.out.println("Names count: " + names.size());
+        for (String name : names) {
+            System.out.println(name);
         }
 
-        // インデックスでアクセス
-        System.out.println("First fruit: " + fruits.get(0));
-
-        // 要素の削除
-        fruits.remove("Banana");
-        System.out.println("After removal: " + fruits);
-
-        // null と空リストの扱い
-        List<String> empty = new ArrayList<>();
-        System.out.println("Is empty list empty? " + empty.isEmpty());
-
-        // ジェネリクスの型安全性の例 (コンパイル時にチェックされる)
-        // fruits.add(123); // ← これはコンパイルエラーになる
+        // 取り出した値は型が決まっているのでキャスト不要
+        String first = names.get(0);
+        System.out.println("First name: " + first);
     }
 }
