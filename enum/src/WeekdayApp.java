@@ -47,5 +47,6 @@ public class WeekdayApp {
             = java.util.EnumSet.of(WeekdayEnumAdvance.SATURDAY, WeekdayEnumAdvance.SUNDAY);
         System.out.println("Is Saturday in weekendSet? " 
             + weekendSet.contains(WeekdayEnumAdvance.SATURDAY));
+
     }
 }
